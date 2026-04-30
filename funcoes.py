@@ -10,8 +10,8 @@ def rolar_dados(n):
 def guardar_dado(dadosrolados, dadosguardados, i):
     lista_final = []
     dadosguardados.append(dadosrolados[i])
-    del dadosrolados(i)
-    lista_final.append(dadosrolados)
+    dadosrolados_nova = dadosrolados.pop(i)
+    lista_final.append(dadosrolados_nova)
     lista_final.append(dadosguardados)
     return lista_final
     
