@@ -48,5 +48,13 @@ def calcula_pontos_sequencia_baixa(dadosrolados):
     return 0 
 
 
-    
-
+def  calcula_pontos_sequencia_alta(dadosrolados):
+    sequencias_altas = [[1,2,3,4,5],[2,3,4,5,6]]
+    for sequencia in sequencias_altas:
+        verifica = 0
+        for dado in sequencia:
+            if dado  not in dadosrolados:
+                verifica +=1
+        if verifica == 0:
+            return 30
+    return 0
