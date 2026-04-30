@@ -36,6 +36,16 @@ def calcula_pontos_soma(dadosrolados):
         soma+=dado
     return soma
 
+def calcula_pontos_sequencia_baixa(dadosrolados):
+    sequencias_baixas = [[1,2,3,4],[2,3,4,5],[3,4,5,6]]
+    for sequencia in sequencias_baixas:
+        verifica = 0
+        for  dado in sequencia:
+            if dado not in dadosrolados:
+                verifica +=1
+        if verifica == 0:
+            return 15
+    return 0 
 
 
     
