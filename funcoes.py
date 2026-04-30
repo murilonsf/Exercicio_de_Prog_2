@@ -18,7 +18,7 @@ def guardar_dado(dadosrolados, dadosguardados, i):
 def remover_dado(dadosrolados, dadosguardados, i):
      lista_final = []
      dadosrolados.append(dadosguardados[i])
-     del dadosguardados
+     del dadosguardados[i]
      lista_final.append(dadosrolados)
      lista_final.append(dadosguardados)
      return lista_final
