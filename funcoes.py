@@ -6,3 +6,14 @@ def rolar_dados(n):
         dadonovo = random.randint(1,6)
         dados.append(dadonovo)
     return dados
+
+def guardar_dado(dadosrolados, dadosguardados, i):
+    lista_final = []
+    dadosguardados.append(dadosrolados[i])
+    dadosrolados.remove(dadosrolados[i])
+    lista_final.append(dadosrolados)
+    lista_final.append(dadosguardados)
+    return lista_final
+    
+    
+
