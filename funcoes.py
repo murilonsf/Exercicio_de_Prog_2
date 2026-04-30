@@ -1,4 +1,8 @@
-teste 1
-teste 2
-teste 3
-teste 4
+import random
+
+def rolar_dados(n):
+    dados = []
+    for i in range(n):
+        dadonovo = random.randint(1,6)
+        dados.append(dadonovo)
+    return dados
