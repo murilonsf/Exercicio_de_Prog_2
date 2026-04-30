@@ -23,6 +23,14 @@ def remover_dado(dadosrolados, dadosguardados, i):
      lista_final.append(dadosguardados)
      return lista_final
 
+def calcula_pontos_regra_simples(dadosrolados):
+    pontos = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for dado in dadosrolados:
+        if dado in pontos:
+            pontos[dado]+=dado
+    return pontos
+    
+
     
     
 
