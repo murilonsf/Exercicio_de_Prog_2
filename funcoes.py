@@ -68,7 +68,10 @@ def calcula_pontos_full_house(dadosrolados):
             verificador[dado] =1
     numeros = list(verificador.values())
     if len(numeros) ==2 and (2 in numeros and 3 in numeros):
-        return sum(dadosrolados)
+        soma = 0
+        for dado in dadosrolados:
+            soma += dado
+        return soma
     
     return 0
 
