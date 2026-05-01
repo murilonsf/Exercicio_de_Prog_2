@@ -58,3 +58,17 @@ def  calcula_pontos_sequencia_alta(dadosrolados):
         if verifica == 0:
             return 30
     return 0
+
+def calcula_pontos_full_house(dadosrolados):
+    verificador = {}
+    for dado in dadosrolados:
+        if dado in verificador:
+            verificador[dado] +=1
+        else:
+            verificador[dado] =1
+    numeros = list(verificador.values())
+    if len(numeros) ==2 and (2 in numeros and 3 in numeros):
+        return sum(dadosrolados)
+    
+    return 0
+
