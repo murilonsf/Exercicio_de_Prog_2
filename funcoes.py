@@ -75,3 +75,19 @@ def calcula_pontos_full_house(dadosrolados):
     
     return 0
 
+def calcula_pontos_full_quadra(dadosrolados):
+    verificador = {}
+    for dado in dadosrolados:
+        if dado in verificador:
+            verificador[dado] +=1
+        else:
+            verificador[dado] = 1
+    numeros = list(verificador.values())
+    if len(numeros) == 4:
+        soma = 0
+        for dado in dadosrolados:
+            soma += dado
+        return soma
+    
+    return 0
+
