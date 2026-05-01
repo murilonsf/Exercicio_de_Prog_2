@@ -99,7 +99,7 @@ def calcula_pontos_quina(dadosrolados):
         else:
             verificador[dado] = 1
     numeros = list(verificador.values())
-    if (5 in numeros) or (6 in numeros) or (7 in numeros):
+    if (5 in numeros) or (6 in numeros) or (7 in numeros) or (8 in numeros):
         return 50
     
     return 0
