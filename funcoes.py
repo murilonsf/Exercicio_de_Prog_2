@@ -83,7 +83,7 @@ def calcula_pontos_quadra(dadosrolados):
         else:
             verificador[dado] = 1
     numeros = list(verificador.values())
-    if 4 in valores:
+    if 4 in numeros:
         soma = 0
         for dado in dadosrolados:
             soma += dado
