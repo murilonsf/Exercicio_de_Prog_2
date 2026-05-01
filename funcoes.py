@@ -92,7 +92,7 @@ def calcula_pontos_quadra(dadosrolados):
     return 0
 
 def calcula_pontos_quina(dadosrolados):
-    verificador - {}
+    verificador = {}
     for dado in dadosrolados:
         if dado in verificador:
             verificador[dado] +=1
