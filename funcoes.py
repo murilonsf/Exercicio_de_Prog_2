@@ -75,7 +75,7 @@ def calcula_pontos_full_house(dadosrolados):
     
     return 0
 
-def calcula_pontos_full_quadra(dadosrolados):
+def calcula_pontos_quadra(dadosrolados):
     verificador = {}
     for dado in dadosrolados:
         if dado in verificador:
