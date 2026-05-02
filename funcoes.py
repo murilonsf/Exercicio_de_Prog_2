@@ -108,12 +108,14 @@ def calcula_pontos_regra_avancada(dadosrolados):
     return {'cinco_iguais': calcula_pontos_quina(dadosrolados), 'full_house': calcula_pontos_full_house(dadosrolados), 'quadra': calcula_pontos_quadra(dadosrolados), 'sem_combinacao': calcula_pontos_soma(dadosrolados), 'sequencia_alta': calcula_pontos_sequencia_alta(dadosrolados), 'sequencia_baixa': calcula_pontos_sequencia_baixa(dadosrolados)}
 
 def faz_jogada(dadosrolados, categoria, cartela):
+
     pontossimples = calcula_pontos_regra_simples(dadosrolados)
     pontosavancados = calcula_pontos_regra_avancada(dadosrolados)
 
-    if categoria in cartela['regra_simples']:
+    if categoria in pontossimples:
         cartela['regra_simples'][categoria] = pontossimples[categoria]
-    elif categoria in cartela['regra_avancada']:
+
+    elif categoria in pontosavancados:
         cartela['regra_avancada'][categoria] = pontosavancados[categoria]
 
     return cartela
