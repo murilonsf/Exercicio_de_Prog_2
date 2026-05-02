@@ -31,8 +31,8 @@ funcoes.imprime_cartela(cartela_pontos)
 
 for rodada in range(12):
 
-    if all(v != -1 for v in cartela_de_pontos['regra_simples'].values()) and \
-        all(v != -1 for v in cartela_de_pontos['regra_avancada'].values()):
+    if all(v != -1 for v in cartela_pontos['regra_simples'].values()) and \
+        all(v != -1 for v in cartela_pontos['regra_avancada'].values()):
         break
 
     dados_rolados = dados(5)
