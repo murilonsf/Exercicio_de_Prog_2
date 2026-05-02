@@ -122,12 +122,16 @@ def faz_jogada(dadosrolados, categoria, cartela):
     pontossimples = calcula_pontos_regra_simples(dadosrolados)
     pontosavancados = calcula_pontos_regra_avancada(dadosrolados)
 
-    if categoria in pontossimples:
-        if cartela ['regra_simples'][categoria] == -1:
-            cartela['regra_simples'][categoria] = pontossimples[categoria]
-    elif categoria in pontosavancados:
+    if categoria in pontosavancados:
         if cartela ['regra_avancada'][categoria] == -1:
             cartela['regra_avancada'][categoria] = pontosavancados[categoria]
+
+    else:
+        simples_inteiro = int(categoria)
+        if simples_inteiro in pontossimples:
+            if cartela ['regra_simples'][simples_inteiro] == -1:
+                cartela['regra_simples'][simples_inteiro] = pontossimples[simples_inteiro]
+    
 
     return cartela
 
