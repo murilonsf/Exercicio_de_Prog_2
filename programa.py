@@ -71,7 +71,7 @@ for rodada in range(12):
                 print ('Essa combinação já foi utilizada.')
                 continue
         else:
-            if cartela_pontos['regra_avancada'][combinacao] != -1':
+            if cartela_pontos['regra_avancada'][combinacao] != -1:
                 print ('Essa combinação já foi utilizada.')
                 continue
         
