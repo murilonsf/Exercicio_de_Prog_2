@@ -24,10 +24,14 @@ def remover_dado(dadosrolados, dadosguardados, i):
      return lista_final
 
 def calcula_pontos_regra_simples(dadosrolados):
-    pontos = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-    for dado in dadosrolados:
-        if dado in pontos:
-            pontos[dado]+=dado
+    pontos = {}
+
+    for i in range(1,7):
+        soma = 0
+        for dado in dadosrolados:
+            if dado == i:
+                soma += dado
+        pontos[i] = soma
     return pontos
 
 def calcula_pontos_soma(dadosrolados):
@@ -105,7 +109,13 @@ def calcula_pontos_quina(dadosrolados):
     return 0
 
 def calcula_pontos_regra_avancada(dadosrolados):
-    return {'cinco_iguais': calcula_pontos_quina(dadosrolados), 'full_house': calcula_pontos_full_house(dadosrolados), 'quadra': calcula_pontos_quadra(dadosrolados), 'sem_combinacao': calcula_pontos_soma(dadosrolados), 'sequencia_alta': calcula_pontos_sequencia_alta(dadosrolados), 'sequencia_baixa': calcula_pontos_sequencia_baixa(dadosrolados)}
+    return {
+        'cinco_iguais': calcula_pontos_quina(dadosrolados), 
+        'full_house': calcula_pontos_full_house(dadosrolados), 
+        'quadra': calcula_pontos_quadra(dadosrolados), 
+        'sem_combinacao': calcula_pontos_soma(dadosrolados), 
+        'sequencia_alta': calcula_pontos_sequencia_alta(dadosrolados), 
+        'sequencia_baixa': calcula_pontos_sequencia_baixa(dadosrolados)}
 
 def faz_jogada(dadosrolados, categoria, cartela):
 
